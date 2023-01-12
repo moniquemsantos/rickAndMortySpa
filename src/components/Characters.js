@@ -1,12 +1,9 @@
-import React, { useEffect, useState } from "react";
-import Character from "./Character";
+import CharacterCard from "./Character";
 
-function Characters({ characters } ) {
+function Characters({ characters }) {
   return (
     <div>
-      {characters.map((character) => {
-        return <Character key={character.id} character={character} />;
-      })}
+      {characters.map((character) => <CharacterCard key={character.id} character={character}/>)}
     </div>
   );
 }

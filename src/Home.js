@@ -1,6 +1,6 @@
-import SearchBox from "./components/SearchBox";
-import Characters from "./components/Characters";
+import ListOfCharacters from "./components/Characters";
 import {useEffect, useState} from "react";
+import Header from "./components/Header";
 
 function HomePage() {
   const url = "https://rickandmortyapi.com/api/character";
@@ -17,8 +17,8 @@ function HomePage() {
 
   return (
     <div>
-      <h1>Rick and Morty</h1>
-      <Characters characters={ characters }/>
+      <Header/>
+      <ListOfCharacters characters={characters}/>
     </div>
   );
 }
