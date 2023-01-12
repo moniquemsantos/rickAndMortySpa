@@ -1,6 +1,6 @@
 import React from "react";
-import {Button} from "react-bootstrap";
 import "./CharacterCard.css"
+import {Button} from "@mui/material";
 
 
 function CharacterCard({character}) {
@@ -12,7 +12,7 @@ function CharacterCard({character}) {
         </div>
         <div className="flip-card-back">
           <p>{character.name}</p>
-          < Button/>
+          <Button variant="contained" color="primary">More Info</Button>
         </div>
       </div>
     </div>
