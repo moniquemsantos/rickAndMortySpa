@@ -1,4 +1,4 @@
-import {Grid} from "@material-ui/core";
+import {Grid} from "@mui/material";
 import CharacterCard from "./CharacterCard";
 
 function ListOfCharacters({ characters }) {
