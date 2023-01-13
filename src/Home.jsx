@@ -5,6 +5,7 @@ import Header from "./components/Header";
 function HomePage() {
   const url = "https://rickandmortyapi.com/api/character";
   const [characters, setCharacters] = useState([]);
+  const [searchTerm, setSearchTerm] = useState(""); 
 
   useEffect(() => {
     fetch(url)
@@ -17,8 +18,8 @@ function HomePage() {
 
   return (
     <div>
-      <Header/>
-      <ListOfCharacters characters={characters}/>
+      <Header handleSearch={setSearchTerm}/>
+      <ListOfCharacters filter={searchTerm} characters={characters}/>
     </div>
   );
 }
