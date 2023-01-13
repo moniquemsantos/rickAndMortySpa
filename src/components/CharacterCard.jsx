@@ -1,5 +1,4 @@
 import React from "react";
-import Box from '@mui/material/Box';
 import {Button} from "@mui/material";
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
@@ -10,6 +9,8 @@ function CharacterCard({character}) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
+  console.log("prop", character)
 
   return (
     <div className="flip-card">
@@ -26,14 +27,13 @@ function CharacterCard({character}) {
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"
           >
-            <Box>
-              <Typography id="modal-modal-title" variant="h6" component="h2">
-                Text in a modal
-              </Typography>
-              <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-              </Typography>
-            </Box>
+            <div className="flipCardDetail">
+              <h3>{character.name}</h3>
+              <img src={character.image} alt={character.name}/>
+              <p> {`Species: ${character.species}`}</p>
+              <p>{`Status: ${character.status}`}</p>
+            
+            </div>
           </Modal>
           
           
