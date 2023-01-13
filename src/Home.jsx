@@ -1,4 +1,4 @@
-import ListOfCharacters from "./components/Characters";
+import ListOfCharacters from "./components/ListOfCharacters";
 import {useEffect, useState} from "react";
 import Header from "./components/Header";
 
